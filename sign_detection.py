@@ -11,7 +11,7 @@ model_dict = pickle.load(open('./model.p', 'rb'))
 model = model_dict['model']
 
 engine = pyttsx3.init()
-engine.setProperty('rate', 80)
+engine.setProperty('rate', 85)
 
 def detect_fingers():
     mp_hands = mp.solutions.hands
@@ -80,19 +80,8 @@ def detect_fingers():
             except:
                 letters.append(" ")
 
-            #if predicted_character != ' ':
-            #    word.append(predicted_character)
-            #else:
-            #    res = ''.join(word)
-            #    print(res)
-            #    engine.say(res)
-            #    engine.runAndWait()
-            #    
-            #    word = []
-            #    #if word[len(word)-2] == word[len(word)-1] == ' ':
-            #    #    word[len(word)-2] = '.'
                 
-            if len(letters) == 15:
+            if len(letters) == 18:
                 letter = letters[len(letters)-1]
                 keyboard.type(letter)
                 if predicted_character != ' ':
