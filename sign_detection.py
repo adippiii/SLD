@@ -100,12 +100,12 @@ def detect_fingers():
 
                     punctuation.append(' ')
                     if len(punctuation) == 2:
-                        res = ' '.join(sentence)
+                        res = ' '.join(sentence)x
                         engine.say(res)
                         engine.runAndWait()
                         print(res)
                         sentence = []
-                        punctuation = []
+                        punctuation = []x
                 letters = []
 
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 0), 4)
